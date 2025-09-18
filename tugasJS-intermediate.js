@@ -50,16 +50,24 @@ class mahasiswaBeasiswa extends Mahasiswa{
 
     }
      statusBeasiswa(){
-        return`perkenalkan nama saya ${this.nama},
-         dengan nilai : ${this.nilai}, 
-         jurusan  : ${this.jurusan},
-         menerima beasiswa : ${this.beasiswa}`
+        return`Nama : ${this.nama},
+         Nilai : ${this.nilai}, 
+         Jurusan: ${this.jurusan},
+         Menerima beasiswa : ${this.beasiswa}`
 
     }
 } 
-const mhs1= new mahasiswaBeasiswa ("riki", 67, "manajemen", )
+const mhs1= new mahasiswaBeasiswa ("riki", 80, "manajemen", )
 console.log("status riki :",mhs1.getStatus())
-console.log( "status beasiswa", mhs1.statusBeasiswa())
+console.log( mhs1.statusBeasiswa())
+
+const mhs2= new mahasiswaBeasiswa ("adi", 90, "manajemen", )
+console.log("status adi :",mhs2.getStatus())
+console.log( mhs2.statusBeasiswa())
+
+const mhs3= new mahasiswaBeasiswa ("sahroni", 67, "manajemen", )
+console.log("status sahroni :",mhs3.getStatus())
+console.log( mhs3.statusBeasiswa())
 
 // 5.Asynchronous dengan Promise  ===========================================================================================
 
@@ -86,7 +94,7 @@ async function getStatus() {
     }catch (error){
     console.error(error)
     }finally{
-        console.log("selesai")
+        console.log("data berhasil diambil dari server")
     }
 }
 getStatus();
